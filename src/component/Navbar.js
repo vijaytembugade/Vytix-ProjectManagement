@@ -21,7 +21,8 @@ function Navbar() {
                     <Link to="/signup">Signup</Link>
                 </li>
                 <li>
-                    <button className="btn" onClick={logout}>Logout</button>
+                    {!isPending && <button className="btn" onClick={logout}>Logout</button>}
+                    {isPending && <button className="btn" disabled={true}>Loging Out ...</button>}
                 </li>
             </ul>
         </div>

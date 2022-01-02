@@ -67,7 +67,7 @@ const Signup = () => {
             <div className='google-button-container'>
                 <div class="google-button" onClick={ handleGoogleSignin }>
                     <img alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                    <p>Sign in with Google</p>
+                    <p>Sign up with Google</p>
                 </div>
             </div>
             <hr />
