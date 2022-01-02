@@ -74,11 +74,3 @@ textarea {
   margin: 10px 0;
 }
 
-.success{
-  color: rgb(2, 51, 23);
-  background: rgb(181, 243, 200);
-  border: 1px solid rgb(43, 109, 4);
-  border-radius: 4px;
-  padding: 8px;
-  margin: 10px 0;
-}

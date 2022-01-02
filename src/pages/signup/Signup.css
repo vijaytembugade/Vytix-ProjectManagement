@@ -35,3 +35,49 @@
       width: 30px;
       height:30px;
   }
+  .success-upload{
+    font-size: large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(43, 143, 71);
+    text-decoration: underline;
+  }
+  .spinner-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .spinner{
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: var(--primary-color) transparent var(--primary-color) transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.google-button > img{
+    width: 25px;
+    margin-right: 10px;
+
+}
+.google-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.google-button-container{
+  margin-bottom: 25px;
+  width:100% ;
+}
+hr{
+  width: 360px;
+}

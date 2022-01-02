@@ -1,11 +1,13 @@
 import './Navbar.css'
 import Temple from '../assets/temple.svg'
 import { Link, useHistory } from 'react-router-dom'
+import {useLogout} from '../hooks/useLogout'
 
 
 function Navbar() {
     const history = useHistory();
-    return (
+    const { logout, error, isPending } = useLogout()
+     return (
         <div className='navbar'>
             <ul>
                 <li className="logo" onClick={()=>history.push('/')}>
@@ -19,7 +21,7 @@ function Navbar() {
                     <Link to="/signup">Signup</Link>
                 </li>
                 <li>
-                    <button className="btn">Logout</button>
+                    <button className="btn" onClick={logout}>Logout</button>
                 </li>
             </ul>
         </div>
