@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useSignup } from '../../hooks/useSignup'
 import { useGoogleAuth } from '../../hooks/useGoogleAuth'
 import './Signup.css'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -65,9 +66,10 @@ const Signup = () => {
     return (
         <>
             <div className='google-button-container'>
+            { errorGoogle && <div className='error'>{ errorGoogle }</div> }
                 <div class="google-button" onClick={ handleGoogleSignin }>
                     <img alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                    <p>Sign up with Google</p>
+                    {!osPendingGoogle ? <p>Sign up with Google</p> : <p>Signing in ...</p>}
                 </div>
             </div>
             <hr />
@@ -76,6 +78,7 @@ const Signup = () => {
             <form className='auth-form' onSubmit={ handleSubmit }>
 
                 <h2>Sign up</h2>
+                Already a user? <Link to='/login'>Login </Link>
 
 
                 <label>
@@ -126,10 +129,13 @@ const Signup = () => {
                 </div> :
                     <button className="btn btn-large">Sign up</button>
                 }
+                
 
 
 
             </form>
+
+            
         </>
     )
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useGoogleAuth } from '../../hooks/useGoogleAuth'
 import './Login.css'
 import { useLogin } from '../../hooks/useLogin'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     const { login, isPending, error } = useLogin()
@@ -14,12 +15,15 @@ const Login = () => {
         e.preventDefault()
         login(email, password)
     }
+
+    
     return (
         <div>
             <div className='google-button-container'>
-                <div class="google-button" onClick={ ()=> signupGoogle() }>
+            { errorGoogle && <div className='error'>{ errorGoogle }</div> }
+                <div class="google-button" onClick={ ()=>signupGoogle() }>
                     <img alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                    <p>Log in with Google</p>
+                    {!osPendingGoogle ? <p>Log in with Google</p> : <p>Logging in...</p>}
                 </div>
             </div>
             <hr />
@@ -28,6 +32,7 @@ const Login = () => {
             <form className='auth-form' onSubmit={ handleSubmit }>
 
                 <h2>Log in</h2>
+                
                 <label>
                     <span>Email</span>
                     <input type="email" required onChange={ (e) => setEmail(e.target.value) } value={ email } />
@@ -44,6 +49,10 @@ const Login = () => {
                 </div> :
                     <button className="btn btn-large">Log in</button>
                 }
+                <p>
+                <br/>
+                Create a new Account <Link to='/signup'>Sign Up </Link>
+                </p>
 
 
 
