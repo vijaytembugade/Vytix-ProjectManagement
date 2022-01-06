@@ -8,6 +8,9 @@ import Signup from './pages/signup/Signup';
 import Navbar from './component/Navbar';
 import Sidebar from './component/Sidebar';
 import { useAuthContext } from './hooks/useAuthContext';
+import Home from './pages/Home/Home';
+import About from './pages/about/About';
+import OnlineUsers from './component/OnlineUsers';
 function App() {
   const { user, authIsReady } = useAuthContext()
   return (
@@ -38,8 +41,15 @@ function App() {
                 { user && <Redirect to="/" /> }
                 { !user && <Signup /> }
               </Route>
+              <Route exact path='/home'>
+                <Home/>
+              </Route>
+              <Route exact path='/about'>
+                <About/>
+              </Route>
             </Switch>
           </div>
+          {user && <OnlineUsers/>}
         </BrowserRouter>
       ) }
     </div>

@@ -67,7 +67,7 @@ const Signup = () => {
         <>
             <div className='google-button-container'>
             { errorGoogle && <div className='error'>{ errorGoogle }</div> }
-                <div class="google-button" onClick={ handleGoogleSignin }>
+                <div className="google-button" onClick={ handleGoogleSignin }>
                     <img alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                     {!osPendingGoogle ? <p>Sign up with Google</p> : <p>Signing in ...</p>}
                 </div>
@@ -130,8 +130,6 @@ const Signup = () => {
                     <button className="btn btn-large">Sign up</button>
                 }
                 
-
-
 
             </form>
 

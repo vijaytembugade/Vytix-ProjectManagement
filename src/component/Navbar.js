@@ -12,7 +12,7 @@ function Navbar() {
     return (
         <div className='navbar'>
             <ul>
-                <li className="logo" onClick={ () => history.push('/') }>
+                <li className="logo" onClick={ () => history.push('/home') }>
                     <img src={ Temple } alt="logo" />
                     <span>Vytix</span>
                 </li>

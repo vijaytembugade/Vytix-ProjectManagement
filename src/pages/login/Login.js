@@ -21,7 +21,7 @@ const Login = () => {
         <div>
             <div className='google-button-container'>
             { errorGoogle && <div className='error'>{ errorGoogle }</div> }
-                <div class="google-button" onClick={ ()=>signupGoogle() }>
+                <div className="google-button" onClick={ ()=>signupGoogle() }>
                     <img alt="Google login" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                     {!osPendingGoogle ? <p>Log in with Google</p> : <p>Logging in...</p>}
                 </div>
