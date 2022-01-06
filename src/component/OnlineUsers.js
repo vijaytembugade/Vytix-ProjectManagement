@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+
 import { useCollection } from "../hooks/useCollection"
 import Avatar from "./Avatar"
 import "./OnlineUser.css"

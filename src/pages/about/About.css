@@ -1,0 +1,45 @@
+.about-main {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 200vh;
+  background: #e0eafc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #cfdef3,
+    #e0eafc
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.about-main div {
+  margin: 25px;
+  padding: 10px;
+  border: 2px solid var(--highlight-color);
+  border-radius: 5px;
+  width: 200px;
+}
+
+.about-main div img {
+  height: 150px;
+  width: 150px;
+}
+
+.about-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 100ms;
+}
+
+.about-item img:hover {
+  width: 152px;
+  height: 152px;
+}

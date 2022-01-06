@@ -35,6 +35,7 @@ export const useGoogleAuth = () => {
          console.log("Firebase storage image uploaded : ", url); 
         }) 
       }).catch(error => {
+        console.log("failed to upload")
         console.error(error);
       });
 
