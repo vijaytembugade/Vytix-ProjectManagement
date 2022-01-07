@@ -18,7 +18,7 @@ const About = () => {
         <div className="about-main" style={ { height: "75vh" } } onWheel={ (e) => handleWheel(e) }>
             <div className="about-item">
                 <img src={ ProjectOrganise } />
-                <span> Project Organisation </span>
+                <span> Project Organisating </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise1 } />
@@ -26,27 +26,27 @@ const About = () => {
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise } />
-                <span> Project Organisation </span>
+                <span> Team Management </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise1 } />
-                <span> Project Planing </span>
+                <span> Task assignment </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise } />
-                <span> Project Organisation </span>
+                <span> Research and Development </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise1 } />
-                <span> Project Planing </span>
+                <span> Communications and standups  </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise } />
-                <span> Project Organisation </span>
+                <span> Reports </span>
             </div>
             <div className="about-item">
                 <img src={ ProjectOrganise1 } />
-                <span> Project Planing </span>
+                <span> Monitoring</span>
             </div>
         </div>
     )
