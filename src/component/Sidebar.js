@@ -1,6 +1,9 @@
 import './Sidebar.css'
 import DashBoardIcon from '../assets/dashboard_icon.svg'
 import AddIcon from '../assets/add_icon.svg'
+import Home from '../assets/home.svg'
+import Info from '../assets/info.svg'
+import Signin from '../assets/signin.svg'
 import { NavLink } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
 import Avatar from './Avatar'
@@ -19,19 +22,19 @@ function Sidebar() {
                     <ul>
                         {!user && <li>
                             <NavLink to="/home">
-                                <img src={DashBoardIcon} alt="dahsboard"/>
+                                <img src={Home} alt="dahsboard"/>
                                 <span>Home</span>
                             </NavLink>
                         </li>}
                         {!user && <li>
                             <NavLink to="/about">
-                                <img src={DashBoardIcon} alt="dahsboard"/>
+                                <img src={Info} alt="dahsboard"/>
                                 <span>About </span>
                             </NavLink>
                         </li>}
                         {!user && <li>
                             <NavLink to="/signup">
-                                <img src={DashBoardIcon} alt="dahsboard"/>
+                                <img src={Signin} alt="dahsboard"/>
                                 <span>Sign Up </span>
                             </NavLink>
                         </li>}

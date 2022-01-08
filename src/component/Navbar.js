@@ -1,5 +1,6 @@
 import './Navbar.css'
 import Temple from '../assets/temple.svg'
+
 import { Link, useHistory } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext';
@@ -25,10 +26,19 @@ function Navbar() {
                     </li>
                 </> }
                 { user &&
-                    <li>
-                        { !isPending && <button className="btn" onClick={ logout }>Logout</button> }
-                        { isPending && <button className="btn" disabled={ true }>Loging Out ...</button> }
-                    </li> }
+                    <>
+                        <li>
+                            <Link to="/home"> Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about"> About</Link>
+                        </li>
+                        <li>
+                            { !isPending && <button className="btn" onClick={ logout }>Logout</button> }
+                            { isPending && <button className="btn" disabled={ true }>Loging Out ...</button> }
+                        </li>
+                    </>
+                }
             </ul>
         </div>
     )
