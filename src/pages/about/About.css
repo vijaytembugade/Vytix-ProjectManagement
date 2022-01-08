@@ -5,17 +5,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   height: 200vh;
-  background: #e0eafc; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #cfdef3,
-    #e0eafc
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #cfdef3,
-    #e0eafc
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .about-main div {
@@ -32,14 +21,16 @@
 }
 
 .about-item {
+  width: 15rem;
+  height: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 100ms;
+  transition: all 500ms;
 }
 
-.about-item img:hover {
-  width: 152px;
-  height: 152px;
+.about-item:hover {
+  height: 13rem;
+  font-weight: 800;
 }
