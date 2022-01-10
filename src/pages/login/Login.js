@@ -32,6 +32,7 @@ const Login = () => {
             <form className='auth-form' onSubmit={ handleSubmit }>
 
                 <h2>Log in</h2>
+                Create a new Account <Link to='/signup'>Sign Up </Link><br/>
                 
                 <label>
                     <span>Email</span>
@@ -51,7 +52,8 @@ const Login = () => {
                 }
                 <p>
                 <br/>
-                Create a new Account <Link to='/signup'>Sign Up </Link>
+                
+                Forgot Password? <Link to='/reset-password'>Click here! </Link>
                 </p>
 
 

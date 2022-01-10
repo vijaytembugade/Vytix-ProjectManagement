@@ -74,3 +74,21 @@ textarea {
   margin: 10px 0;
 }
 
+.error {
+  color: red;
+  background: pink;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.success {
+  color: rgb(29, 85, 2);
+  background: rgb(199, 248, 190);
+  border: 1px solid rgb(36, 99, 4);
+  border-radius: 4px;
+  padding: 8px;
+  margin: 10px 0;
+}
+

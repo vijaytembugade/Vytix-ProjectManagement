@@ -11,6 +11,7 @@ import { useAuthContext } from './hooks/useAuthContext';
 import Home from './pages/Home/Home';
 import About from './pages/about/About';
 import OnlineUsers from './component/OnlineUsers';
+import ForgotPassword from './pages/forgotPassword/ForgotPassword';
 function App() {
   const { user, authIsReady } = useAuthContext()
   return (
@@ -46,6 +47,9 @@ function App() {
               </Route>
               <Route exact path='/about'>
                 <About/>
+              </Route>
+              <Route exact path='/reset-password'>
+                <ForgotPassword/>
               </Route>
             </Switch>
           </div>
