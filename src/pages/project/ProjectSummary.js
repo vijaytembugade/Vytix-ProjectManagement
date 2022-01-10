@@ -18,6 +18,9 @@ const ProjectSummary = ({ project }) => {
                 <p className="due-date">
                     Project due by  { project.dueDate.toDate().toDateString() }
                 </p>
+                <p className="due-date">
+                    Category:   { project.category}
+                </p>
                 <p className="details">
                     { project.details }
                 </p>
