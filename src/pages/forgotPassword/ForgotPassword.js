@@ -16,7 +16,6 @@ const ForgotPassword = () => {
     }
     return (
         <>
-        
             { error && <div className="error">{ error }</div> }
             { !error && linkStatus && <div className="success">Link sent sucessfully, please check your mail ! </div> }
             <form className="forgot-password-form" onSubmit={ handleSubmit }>

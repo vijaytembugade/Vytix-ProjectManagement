@@ -4,17 +4,19 @@ import AddIcon from '../assets/add_icon.svg'
 import Home from '../assets/home.svg'
 import Info from '../assets/info.svg'
 import Signin from '../assets/signin.svg'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
 import Avatar from './Avatar'
 
 function Sidebar() {
     const { user } = useAuthContext()
+    const history = useHistory()
+    
     return (
         <>
             <div className='sidebar'>
                 <div className="sidebar-content">
-                    <div className="user">
+                    <div className="user" onClick={()=>history.push('/profile')}>
                         { user && <Avatar src={ user.photoURL } /> }
                         <p>{ user ? `Hey, ${user.displayName}!` : `Hey, Guest User!` }</p>
                     </div>

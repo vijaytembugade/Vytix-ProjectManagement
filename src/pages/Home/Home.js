@@ -15,7 +15,7 @@ function Home() {
    
     return (
         <div className="home-main" style={{height : "75vh"}} onWheel={(e) => handleWheel(e)}>
-            <h2>Manage your project with Vytix-PM</h2>
+            <h2>Manage your project with Vytix-Project Managament</h2>
             <img alt="Homepage" src={Project}/>
 
         </div>

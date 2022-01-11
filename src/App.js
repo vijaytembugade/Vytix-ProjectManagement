@@ -12,6 +12,7 @@ import Home from './pages/Home/Home';
 import About from './pages/about/About';
 import OnlineUsers from './component/OnlineUsers';
 import ForgotPassword from './pages/forgotPassword/ForgotPassword';
+import Profile from './pages/profile/Profile';
 function App() {
   const { user, authIsReady } = useAuthContext()
   return (
@@ -23,7 +24,7 @@ function App() {
             <Navbar />
             <Switch>
               <Route exact path='/'>
-                { !user && <Redirect to="/signup" /> }
+                { !user && <Redirect to="/home" /> }
                 { user && <Dashboard /> }
               </Route>
               <Route exact path='/create'>
@@ -50,6 +51,10 @@ function App() {
               </Route>
               <Route exact path='/reset-password'>
                 <ForgotPassword/>
+              </Route>
+              <Route exact path='/profile'>
+                {user && <Profile/>}
+                {!user && <Signup/>}
               </Route>
             </Switch>
           </div>
