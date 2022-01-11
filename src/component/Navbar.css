@@ -34,3 +34,37 @@
   text-decoration: none;
   margin-right: 20px;
 }
+.top-bar{
+  display: none;
+}
+@media screen and (max-width: 940px) {
+
+  .top-bar{
+    display: block;
+  }
+  .top-bar nav{
+
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 100%;
+    background: #0eafa7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+  .top-bar nav a{
+    margin: 1% 0% 1% 1%;
+    text-decoration: none;
+    padding:1% 2% 1% 2% ;
+    color: #fff;
+  }
+  .top-bar nav a.active{
+    color: #555;
+    background: var(--bg-color);
+    border-radius: 6px;
+  }
+
+ }

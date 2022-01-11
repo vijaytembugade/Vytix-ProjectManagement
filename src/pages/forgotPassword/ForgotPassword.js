@@ -4,7 +4,7 @@ import "./ForgotPassword.css"
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('')
-    const { forgotPassword, isPending, error } = useForgotPassword()
+    const { forgotPassword, error } = useForgotPassword()
     const [linkStatus, setLinkStatus] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault()
