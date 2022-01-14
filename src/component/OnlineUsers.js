@@ -1,4 +1,5 @@
 
+import { useEffect } from "react"
 import { useCollection } from "../hooks/useCollection"
 import Avatar from "./Avatar"
 import "./OnlineUser.css"
@@ -6,6 +7,8 @@ import "./OnlineUser.css"
 const OnlineUsers = () => {
 
     const {error, documents} = useCollection('users')
+
+
 
 
     return (
